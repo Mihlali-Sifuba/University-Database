@@ -1,12 +1,13 @@
-CREATE TABLE IF NOT EXISTS`university_database`.`students` (
-  `student_number` VARCHAR(255) NOT NULL,
-  `name` VARCHAR(255) NULL,
-  `surname` VARCHAR(255) NULL,
-  `gender` ENUM("M", "F") NULL,
-  `id_number` INT NULL,
-  `date_of_birth` DATE NULL,
-  `email` VARCHAR(255) NULL,
-  `cellphone_number` VARCHAR(255) NULL,
-  `country_id` VARCHAR(3) NULL,
-  `programme_id` VARCHAR(255) NULL,
-  PRIMARY KEY (`student_number`));
+CREATE TABLE IF NOT EXISTS `students` (
+  `student_number` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `surname` varchar(255) NOT NULL,
+  `gender` enum('M','F') DEFAULT NULL,
+  `id_number` int DEFAULT NULL,
+  `date_of_birth` date DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `cellphone_number` varchar(255) DEFAULT NULL,
+  `country_id` varchar(3) DEFAULT NULL,
+  `programme_id` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`student_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
